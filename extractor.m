@@ -145,7 +145,7 @@ int main(int argc, const char *argv[]) {
   NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
 
   [data setObject:iokit_data forKey:@"iokit"];
-  [data setObject:get_root_disk_uuid() forKey:@"root_disk_uuid"];
+  [data setObject:NSUUID.UUID.UUIDString forKey:@"root_disk_uuid"];
 
   NSLog(@"data: %@", data);
 
